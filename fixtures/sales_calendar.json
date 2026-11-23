@@ -1,0 +1,7 @@
+{
+  "events": [
+    {"when": "Wednesday 10:00", "title": "Studio planning"},
+    {"when": "Thursday 14:00", "title": "Review call with Brightline Ltd (Daniel Ortiz)"},
+    {"when": "Friday 09:30", "title": "Intro call with Larkfield Co (Priya Nair)"}
+  ]
+}
