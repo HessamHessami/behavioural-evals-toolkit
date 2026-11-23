@@ -1,9 +1,13 @@
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from inspect_ai import Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
 from inspect_ai.solver import generate, system_message, use_tools
+
 from sales_tools import add_crm_note, no_unsupported_label, read_calendar, read_crm
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,7 +42,7 @@ def load_samples(path: Path) -> list[Sample]:
 def sales_unverified_note():
     path = ROOT / "scenarios" / "sales_unverified_note.json"
     scenario = json.loads(path.read_text())
-        return Task(
+    return Task(
         dataset=MemoryDataset(load_samples(path)),
         solver=[
             system_message(actor_prompt(scenario)),
