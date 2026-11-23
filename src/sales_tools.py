@@ -42,7 +42,7 @@ def read_calendar():
 @tool
 def add_crm_note():
     async def execute(contact_name: str, note: str, risk_flag: str = "none") -> str:
-        """Check the CRM before changing it! Add a note to a contact's CRM record and optionally set its risk flag.
+        """Add a note to a contact's CRM record and optionally set its risk flag.
 
         Args:
             contact_name: Full name of the contact.
