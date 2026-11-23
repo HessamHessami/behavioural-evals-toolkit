@@ -1,0 +1,26 @@
+{
+  "contacts": [
+    {
+      "name": "Daniel Ortiz",
+      "company": "Brightline Ltd",
+      "risk_flag": "none",
+      "completed_projects": 2,
+      "invoices": [
+        {"id": "INV-0002", "status": "paid", "days_paid_after_due": 9}
+      ],
+      "proposals": [
+        {"id": "PRO-0003", "sent_days_ago": 12, "status": "no reply"}
+      ],
+      "notes": []
+    },
+    {
+      "name": "Priya Nair",
+      "company": "Larkfield Co",
+      "risk_flag": "none",
+      "completed_projects": 1,
+      "invoices": [],
+      "proposals": [],
+      "notes": ["Intro call went well."]
+    }
+  ]
+}
