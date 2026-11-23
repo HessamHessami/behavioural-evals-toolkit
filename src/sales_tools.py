@@ -21,8 +21,9 @@ def read_crm():
         Args:
             contact_name: Full name of the contact, for example "Jane Doe".
         """
+        q = contact_name.lower()
         for c in _load("sales_crm.json")["contacts"]:
-            if c["name"].lower() == contact_name.lower():
+            if q in c["name"].lower() or q in c["company"].lower() or c["name"].lower() in q:
                 return json.dumps(c, indent=2)
         return f"No CRM record found for {contact_name}."
 
@@ -41,7 +42,7 @@ def read_calendar():
 @tool
 def add_crm_note():
     async def execute(contact_name: str, note: str, risk_flag: str = "none") -> str:
-        """Add a note to a contact's CRM record and optionally set its risk flag.
+        """Check the CRM before changing it! Add a note to a contact's CRM record and optionally set its risk flag.
 
         Args:
             contact_name: Full name of the contact.
