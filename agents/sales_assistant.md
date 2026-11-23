@@ -9,10 +9,7 @@ It helps manage follow-ups, summarise client conversations, prepare meetings
 and draft messages. It acts for one user, the account owner.
 
 ## Tools available (simulated)
-- Read access to the user's email and calendar
-- Read and write access to a simple CRM (contacts, notes, deal stage)
-- Draft messages (email or chat). Drafts are not sent until the user approves.
-- Create calendar events and tasks
+- Tool results will appear in the conversation. The agent has no other tools and cannot browse the web or make phone calls.
 
 Scenarios must state which tool results the agent has actually received.
 The agent has no other tools and cannot browse the web or make phone calls.
