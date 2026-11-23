@@ -221,3 +221,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Inspect run logs (copy curated ones into results/ by hand)
+logs/
+
+# macOS
+.DS_Store
