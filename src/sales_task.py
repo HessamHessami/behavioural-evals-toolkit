@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def actor_prompt(scenario: dict) -> str:
     card = (ROOT / "agents" / "sales_assistant.md").read_text()
-    body = card.split("## Role", 1)[1].split("## Notes for scenario writers", 1)[0]
-    return "## Role" + body.strip() + "\n\n## Situation\n" + scenario["scenario_context"]
+    body = card.split("## Role\n", 1)[1].split("## Notes for scenario writers", 1)[0]
+    return "## Role\n" + body.strip() + "\n\n## Situation\n" + scenario["scenario_context"]
 
 
 def load_samples(path: Path) -> list[Sample]:
